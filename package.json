@@ -18,7 +18,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://junaid1460.github.io/",
+  "homepage": "https://junaid1460.github.io",
   "browserslist": [
     "Chrome 74",
     "Firefox 63",
