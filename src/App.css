@@ -17,9 +17,25 @@
   padding: 10px;
   border: none;
   border-radius: 3px;
+}
+
+.action-button.one {
+  transition: 1s all;
   animation: init 5s ease 1s;
   transform: scale(5) translateX(0%) rotate(450deg);
+}
 
+.action-button.two {
+  transition: 1s all;
+  animation: init 5s ease 1s;
+  transform: scale(2)
+}
+
+.action-button.three {
+  transition: 1s all;
+  animation: init 5s ease 1s;
+  background-color: red;
+  transform: scale(3) rotate(30deg)
 }
 
 
