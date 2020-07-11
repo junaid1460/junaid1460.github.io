@@ -16,7 +16,6 @@ function App() {
     let taps = 0;
     let timer: any = null
     return () => {
-      console.log(taps)
 
         if(timer) {
           clearTimeout(timer)
@@ -36,7 +35,6 @@ function App() {
     let taps = 0;
     let timer: any = null
     return () => {
-      console.log(taps)
 
         if(timer) {
           clearTimeout(timer)
