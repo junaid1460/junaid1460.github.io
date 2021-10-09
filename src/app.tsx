@@ -35,7 +35,6 @@ const App: Component = () => {
 
   return (
     <div class={styles.container}>
-      <div class={styles.backLay}> </div>
       <div class={styles.topbar}>
         <div class={styles.logo}></div>
         <span class={styles.logoName}>Brain food</span>
