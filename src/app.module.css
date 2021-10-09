@@ -13,11 +13,12 @@
 
 .topbar {
   grid-area: topbar;
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   align-items: flex-end;
   padding-left: 100px;
   padding-bottom: 150px;
+  z-index: 2;
 }
 
 .sidebar {
@@ -41,6 +42,9 @@
 .footer {
   grid-area: footer;
   background-color: #dfdfdf;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   /* background: linear-gradient(181deg, #e4d4d1, white); */
 }
 
@@ -81,4 +85,26 @@
 .contactIcon {
   height: 40px;
   width: 40px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 0 1fr;
+    grid-template-rows: 350px 1fr 100px 0px 400px;
+  }
+
+  .topbar {
+    padding-left: 10px;
+  }
+
+  .content {
+    box-shadow: none;
+  }
+
+  body {
+    background-color: #dfdfdf;
+  }
+  .contactInformation {
+    padding: 30px 0 0 10px;
+  }
 }

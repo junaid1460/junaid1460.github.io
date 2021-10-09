@@ -11,10 +11,6 @@ marked.setOptions({
   },
 });
 
-const content = `
-
-`;
-
 import styles from "./app.module.css";
 import "./app.scss";
 import "github-markdown-css/github-markdown.css";
@@ -23,24 +19,26 @@ const App: Component = () => {
   const urlSearchParams = new URLSearchParams(window.location.search);
   const params = Object.fromEntries(urlSearchParams.entries());
 
-  const page = params.page || "home";
+  let page = params.page || "home";
 
   const [content, setContent] = createSignal<string>();
 
   console.log(page);
 
-  fetch(`/pages/${page}.md`)
+  if (!page.startsWith("http")) {
+    page = `/pages/${page}.md`;
+  }
+
+  fetch(page)
     .then((e) => e.text())
     .then((response) => setContent(response));
 
   return (
     <div class={styles.container}>
+      <div class={styles.backLay}> </div>
       <div class={styles.topbar}>
         <div class={styles.logo}></div>
         <span class={styles.logoName}>Brain food</span>
-        <span style="padding-left: 5px; margin-bottom: -10px">
-          from <a href="https://github.com/junaid1460">junaid1460</a>
-        </span>
       </div>
       <div class={styles.sidebar}></div>
       <div class={styles.content}>
