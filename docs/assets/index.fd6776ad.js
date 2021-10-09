@@ -1,0 +1,12 @@
+import{t as y,e as b,l as h,c as p,r as N,a as O}from"./vendor.12f59458.js";const x=function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))l(e);new MutationObserver(e=>{for(const o of e)if(o.type==="childList")for(const s of o.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&l(s)}).observe(document,{childList:!0,subtree:!0});function a(e){const o={};return e.integrity&&(o.integrity=e.integrity),e.referrerpolicy&&(o.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?o.credentials="include":e.crossorigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function l(e){if(e.ep)return;e.ep=!0;const o=a(e);fetch(e.href,o)}};x();const C="_container_1n3mu_1",L="_topbar_1n3mu_14",j="_sidebar_1n3mu_23",k="_content_1n3mu_28",w="_footer_1n3mu_41",E="_logo_1n3mu_47",S="_logoName_1n3mu_56",I="_bottomContentOverlay_1n3mu_66";var i={container:C,topbar:L,sidebar:j,content:k,footer:w,logo:E,logoName:S,bottomContentOverlay:I};const P=y('<div><div><div></div><span>Brain food</span><span style="padding-left: 5px; margin-bottom: -10px">from <a href="https://github.com/junaid1460">junaid1460</a></span></div><div></div><div><div class="app-markdown markdown-body"></div></div><div></div></div>');b.setOptions({highlight:(r,n)=>(console.log(n,h.highlight(r,{language:n}).value),h.highlight(n,r).value)});const A=`
+## Posts
+1. [A problem from google foobar](google.com)
+2. ...
+
+### Footnote
+
+Just started drafting down my journey
+
+if you have any query, hit me up junaid1460@gmail.com ( format your subject like this \`PROFILE: ..\` )
+
+`,F=()=>(()=>{const r=P.cloneNode(!0),n=r.firstChild,a=n.firstChild,l=a.nextSibling,e=n.nextSibling,o=e.nextSibling,s=o.firstChild,$=o.nextSibling;return p(t=>{const d=i.container,c=i.topbar,u=i.logo,v=i.logoName,m=i.sidebar,f=i.content,_=b(A,{headerIds:!0,breaks:!0}),g=i.footer;return d!==t._v$&&(r.className=t._v$=d),c!==t._v$2&&(n.className=t._v$2=c),u!==t._v$3&&(a.className=t._v$3=u),v!==t._v$4&&(l.className=t._v$4=v),m!==t._v$5&&(e.className=t._v$5=m),f!==t._v$6&&(o.className=t._v$6=f),_!==t._v$7&&(s.innerHTML=t._v$7=_),g!==t._v$8&&($.className=t._v$8=g),t},{_v$:void 0,_v$2:void 0,_v$3:void 0,_v$4:void 0,_v$5:void 0,_v$6:void 0,_v$7:void 0,_v$8:void 0}),r})();N(()=>O(F,{}),document.getElementById("root"));
