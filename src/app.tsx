@@ -46,7 +46,15 @@ const App: Component = () => {
         ></div>
       </div>
       <div class={styles.footer}>
-        {/* <div class={styles.bottomContentOverlay}></div> */}
+        <div class={styles.contactInformation}>
+          <a href="https://www.linkedin.com/in/junaid1460" target="_blank">
+            <i class="fab fa-linkedin" className={styles.contactIcon}></i>
+          </a>
+
+          <a href="https://github.com/junaid1460" target="_blank">
+            <i class="fab fa-github" className={styles.contactIcon}></i>
+          </a>
+        </div>
       </div>
     </div>
   );
