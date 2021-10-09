@@ -1,4 +1,4 @@
-import type { Component } from "solid-js";
+import { Component, createSignal } from "solid-js";
 import marked from "marked";
 import highlightJS from "highlight.js";
 
@@ -12,15 +12,6 @@ marked.setOptions({
 });
 
 const content = `
-## Posts
-1. [A problem from google foobar](google.com)
-2. ...
-
-### Footnote
-
-Just started drafting down my journey
-
-if you have any query, hit me up junaid1460@gmail.com ( format your subject like this \`PROFILE: ..\` )
 
 `;
 
@@ -29,6 +20,19 @@ import "./app.scss";
 import "github-markdown-css/github-markdown.css";
 
 const App: Component = () => {
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+
+  const page = params.page || "home";
+
+  const [content, setContent] = createSignal<string>();
+
+  console.log(page);
+
+  fetch(`/pages/${page}.md`)
+    .then((e) => e.text())
+    .then((response) => setContent(response));
+
   return (
     <div class={styles.container}>
       <div class={styles.topbar}>
@@ -42,7 +46,10 @@ const App: Component = () => {
       <div class={styles.content}>
         <div
           class="app-markdown markdown-body"
-          innerHTML={marked(content, { headerIds: true, breaks: true })}
+          innerHTML={marked(content() || "", {
+            headerIds: true,
+            breaks: true,
+          })}
         ></div>
       </div>
       <div class={styles.footer}>
