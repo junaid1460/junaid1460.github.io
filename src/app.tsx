@@ -51,11 +51,19 @@ const App: Component = () => {
       </div>
       <div class={styles.footer}>
         <div class={styles.contactInformation}>
-          <a href="https://www.linkedin.com/in/junaid1460" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/junaid1460"
+            target="_blank"
+            style="color:#1875bf"
+          >
             <i class="fab fa-linkedin" className={styles.contactIcon}></i>
           </a>
 
-          <a href="https://github.com/junaid1460" target="_blank">
+          <a
+            href="https://github.com/junaid1460"
+            target="_blank"
+            style="color: black"
+          >
             <i class="fab fa-github" className={styles.contactIcon}></i>
           </a>
         </div>
